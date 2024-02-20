@@ -1,40 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 19 19:16:10 2024
+Created on Tue Feb 20 16:21:15 2024
 
 @author: Michal
 """
-
-import numpy as np
 import re
-
-def solve_pair(left, right, operator):
-    result = 0
-    match operator:
-        case "+":
-            result = left + right
-        case "-":
-            result = left - right
-        case "*":
-            result = left * right
-        case "/":
-            result = left / right
-    return result
-        
-
-N = int(input())
-expressions = []
-for i in range(0,N):
-    expressions.append(input())
-for i in range(0,N):
-    expression = expressions[i].replace(" ","")
-    
-    
-    
-inputString = "(1+2)+(2/(4-1))"
-number_or_symbol = re.compile('(\d+|[^ 0-9])')
-processedString = re.findall(number_or_symbol, inputString)
-
+import numpy as np
 def numericOperation(left, right, operator):
     result = 0
     match operator:
@@ -111,10 +82,3 @@ for i in range(0,len(target)):
         characters[len(bracketsStack)].append(target[i])
         #characters[-1] = int(characters[-1]*target[i+1]
 finishBrackets(characters[0], operationStack[0])
-
-    
-    
-    
-    
-    
-    
