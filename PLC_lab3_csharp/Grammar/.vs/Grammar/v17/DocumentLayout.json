@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|e:\\c#projects\\plc_lab3_csharp\\grammar\\grammar\\grammarops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|solutionrelative:grammar\\grammarops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|e:\\c#projects\\plc_lab3_csharp\\grammar\\grammar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|solutionrelative:grammar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|e:\\c#projects\\plc_lab3_csharp\\grammar\\grammar\\grammar.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|solutionrelative:grammar\\grammar.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|e:\\c#projects\\plc_lab3_csharp\\grammar\\grammar\\grammar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B8A1589F-DDC5-43D6-9B01-BE0457FA3378}|Grammar\\Grammar.csproj|solutionrelative:grammar\\grammar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Program.cs",
+              "RelativeDocumentMoniker": "Grammar\\Program.cs",
+              "ToolTip": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Program.cs",
+              "RelativeToolTip": "Grammar\\Program.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T20:52:15.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Grammar",
+              "DocumentMoniker": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+              "RelativeDocumentMoniker": "Grammar\\Grammar.csproj",
+              "ToolTip": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+              "RelativeToolTip": "Grammar\\Grammar.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-27T15:11:01.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Grammar",
+              "DocumentMoniker": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+              "RelativeDocumentMoniker": "Grammar\\Grammar.csproj",
+              "ToolTip": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+              "RelativeToolTip": "Grammar\\Grammar.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-27T15:09:33.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GrammarOps.cs",
+              "DocumentMoniker": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\GrammarOps.cs",
+              "RelativeDocumentMoniker": "Grammar\\GrammarOps.cs",
+              "ToolTip": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\GrammarOps.cs",
+              "RelativeToolTip": "Grammar\\GrammarOps.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACAAAACVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T14:59:31.74Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

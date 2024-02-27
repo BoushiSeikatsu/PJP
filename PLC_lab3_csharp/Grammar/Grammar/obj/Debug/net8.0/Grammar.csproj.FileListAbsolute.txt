@@ -1,0 +1,15 @@
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\G1.TXT
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\Grammar.exe
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\Grammar.deps.json
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\Grammar.runtimeconfig.json
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\Grammar.dll
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\bin\Debug\net8.0\Grammar.pdb
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.AssemblyInfoInputs.cache
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.AssemblyInfo.cs
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.csproj.CoreCompileInputs.cache
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.dll
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\refint\Grammar.dll
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.pdb
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\Grammar.genruntimeconfig.cache
+E:\C#Projects\PLC_lab3_csharp\Grammar\Grammar\obj\Debug\net8.0\ref\Grammar.dll
