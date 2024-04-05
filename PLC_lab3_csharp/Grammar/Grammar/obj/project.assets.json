@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+      "projectUniqueName": "E:\\Python Scripts\\PJP_Project\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
       "projectName": "Grammar",
-      "projectPath": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+      "projectPath": "E:\\Python Scripts\\PJP_Project\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
       "packagesPath": "C:\\Users\\Michal\\.nuget\\packages\\",
-      "outputPath": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\obj\\",
+      "outputPath": "E:\\Python Scripts\\PJP_Project\\PLC_lab3_csharp\\Grammar\\Grammar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Michal\\AppData\\Roaming\\NuGet\\NuGet.Config",

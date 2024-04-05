@@ -50,4 +50,5 @@ for target in lines:
         if(token in operators):
             tokens.append(("OP",token))
                 
-            
+for token in tokens:
+    print(token[0] + ": " + token[1])

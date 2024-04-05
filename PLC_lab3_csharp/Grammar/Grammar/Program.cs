@@ -1,6 +1,10 @@
 ﻿using Grammar;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.Runtime.CompilerServices;
+using static Grammar.ExtensionsAssistant;
 
 namespace Lab3
 {
@@ -25,6 +29,10 @@ namespace Lab3
 					Console.Write(nt.Name + " ");
 				}
 				Console.WriteLine();
+				foreach(var (rule,first) in gr.First)
+				{
+					//Console.WriteLine(rule + ": " + first.printHashSet());
+				}
 			}
 			catch (GrammarException e)
 			{

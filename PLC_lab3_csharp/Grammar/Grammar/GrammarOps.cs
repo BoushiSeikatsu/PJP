@@ -12,9 +12,10 @@ namespace Lab3
 			this.g = g;
 			compute_empty();
 		}
-
+        private Terminal epsilon = new Terminal("{e}");
 		public ISet<Nonterminal> EmptyNonterminals { get; } = new HashSet<Nonterminal>();
-		private void compute_empty()
+        public Dictionary<Rule, HashSet<Terminal>> First { get; } = new Dictionary<Rule, HashSet<Terminal>>();
+        private void compute_empty()
 		{
 			foreach(var rule in g.Rules)
 			{
@@ -39,7 +40,34 @@ namespace Lab3
 
 
         }
-
+		public void compute_first()
+		{
+			var table = new Dictionary<Nonterminal, (HashSet<Nonterminal> Left, HashSet<Terminal> Right)>();
+			// First.Add(g.Rules[0], new HashSet<Terminal>());
+			foreach(var rule in g.Rules)
+			{
+				var left = new HashSet<Nonterminal>();
+				var right = new HashSet<Terminal>();
+				First.Add(rule, new HashSet<Terminal>());
+				foreach(var symbol in rule.RHS)
+				{
+					if(symbol is Terminal)//Skonci jestli to je terminal
+					{
+						right.Add(symbol as Terminal);
+						break;
+					}
+					if(symbol is Nonterminal)
+					{
+						left.Add(symbol as Nonterminal);
+						if (!EmptyNonterminals.Contains(symbol))//Jestli se neda vynulovat, skonci
+						{
+							break;
+						}
+					}
+				}
+				//First[rule].Add();
+			}
+		}
 		private IGrammar g;
 	}
 }

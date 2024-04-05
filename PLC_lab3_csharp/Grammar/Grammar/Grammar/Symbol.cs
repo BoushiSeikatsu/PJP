@@ -16,5 +16,10 @@ namespace Grammar
 			if (other is null) throw new ArgumentNullException(nameof(other), " cannot be null");
 			return Name.CompareTo(other.Name);
 		}
-	}
+        public override string ToString()
+        {
+            return Name;
+
+        }
+    }
 }

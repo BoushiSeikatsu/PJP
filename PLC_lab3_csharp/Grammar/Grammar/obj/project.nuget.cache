@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oaG4z7BpzcpoE6aU10TdOB79Kk8AZYAXtuO0rlXbaXoRIVxR9LSnECR3Ep5ANXGaUi1CBzLJPgfCno5lsYRSZQ==",
+  "dgSpecHash": "kBCTIugEk8s9zuTN+JzLe6bql6yQ2yl1WIVqGLb4wRqa8zazuWjfCiAwgMiymTkJDSeEVbTNpZngFyc8ACw/sg==",
   "success": true,
-  "projectFilePath": "E:\\C#Projects\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
+  "projectFilePath": "E:\\Python Scripts\\PJP_Project\\PLC_lab3_csharp\\Grammar\\Grammar\\Grammar.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

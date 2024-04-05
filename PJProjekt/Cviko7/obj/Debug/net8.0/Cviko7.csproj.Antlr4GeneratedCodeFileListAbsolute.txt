@@ -1,0 +1,6 @@
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprLexer.cs
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprParser.cs
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprListener.cs
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprBaseListener.cs
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprVisitor.cs
+E:\Python Scripts\PJP_Project\PJProjekt\Cviko7\obj\Debug\net8.0\ExprBaseVisitor.cs
