@@ -4368,19 +4368,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michal\\.nuget\\packages\\": {}
+    "C:\\Users\\msi pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Cviko7.csproj",
+      "projectUniqueName": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\Cviko7.csproj",
       "projectName": "Cviko7",
-      "projectPath": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Cviko7.csproj",
-      "packagesPath": "C:\\Users\\Michal\\.nuget\\packages\\",
-      "outputPath": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\obj\\",
+      "projectPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\Cviko7.csproj",
+      "packagesPath": "C:\\Users\\msi pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\msi pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4444,7 +4444,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

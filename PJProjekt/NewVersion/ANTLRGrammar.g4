@@ -29,8 +29,10 @@ joinedCondition
 expr
     : (op=SUB) expr                         # arNegation
     | (op=NOT) expr                         # lgNegation
-    | expr op=(MUL|DIV|MOD) expr            # mulDiv
-    | expr op=(ADD|SUB|DOT) expr            # addSub
+    | expr op=(MUL|DIV) expr                # mulDiv
+    | expr MOD expr                         # modulo
+    | expr op=(ADD|SUB) expr                # addSub
+    | expr DOT expr                         # concat
     | expr (op=COMPARER) expr               # compare
     | expr (op=EQUALITY) expr               # equality
     | expr (op=LOGICALAND) expr             # logicalAnd

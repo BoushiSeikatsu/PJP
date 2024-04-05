@@ -1,42 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\",
+  "WorkspaceRootPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\newversion\\antlrgrammar.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\antlrgrammar.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\typelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\typelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\newversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\newversion\\newversion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\antlrgrammar.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\antlrgrammar.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\verboseerrorlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\verboseerrorlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\newversion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\newversion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\evalvisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\evalvisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\obj\\debug\\net8.0\\exprlexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\obj\\debug\\net8.0\\exprlexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\evallistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\evallistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\expr.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\expr.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|e:\\python scripts\\pjp_project\\pjprojekt\\cviko7\\verbroseerrorlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F98F3-3F4A-403E-A2F1-8171E5169BB0}|Cviko7\\Cviko7.csproj|solutionrelative:cviko7\\verbroseerrorlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,43 +34,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewVersion",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj",
-              "RelativeDocumentMoniker": "NewVersion\\NewVersion.csproj",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj",
-              "RelativeToolTip": "NewVersion\\NewVersion.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-05T19:50:58.51Z",
+              "DocumentIndex": 0,
+              "Title": "TypeListener.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\TypeListener.cs",
+              "RelativeDocumentMoniker": "NewVersion\\TypeListener.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\TypeListener.cs",
+              "RelativeToolTip": "NewVersion\\TypeListener.cs",
+              "ViewState": "AQIAANQAAAAAAAAAAAAmwOsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T20:25:48.154Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ANTLRGrammar.g4",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
-              "RelativeDocumentMoniker": "NewVersion\\ANTLRGrammar.g4",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
-              "RelativeToolTip": "NewVersion\\ANTLRGrammar.g4",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-05T19:46:23.727Z",
+              "DocumentIndex": 3,
+              "Title": "VerboseErrorListener.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\VerboseErrorListener.cs",
+              "RelativeDocumentMoniker": "NewVersion\\VerboseErrorListener.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\VerboseErrorListener.cs",
+              "RelativeToolTip": "NewVersion\\VerboseErrorListener.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T20:17:29.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Program.cs",
               "RelativeDocumentMoniker": "NewVersion\\Program.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\Program.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Program.cs",
               "RelativeToolTip": "NewVersion\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T19:44:23.878Z",
               "EditorCaption": ""
@@ -91,11 +79,11 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ExprLexer.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
               "RelativeDocumentMoniker": "Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
               "RelativeToolTip": "Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T19:39:25.909Z",
               "EditorCaption": ""
@@ -103,66 +91,33 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EvalVisitor.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\EvalVisitor.cs",
-              "RelativeDocumentMoniker": "Cviko7\\EvalVisitor.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\EvalVisitor.cs",
-              "RelativeToolTip": "Cviko7\\EvalVisitor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T11:07:47.711Z",
+              "Title": "NewVersion.csproj",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj",
+              "RelativeDocumentMoniker": "NewVersion\\NewVersion.csproj",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj",
+              "RelativeToolTip": "NewVersion\\NewVersion.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-05T19:50:58.51Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Program.cs",
-              "RelativeDocumentMoniker": "Cviko7\\Program.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Program.cs",
-              "RelativeToolTip": "Cviko7\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBEAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T10:37:30.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EvalListener.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\EvalListener.cs",
-              "RelativeDocumentMoniker": "Cviko7\\EvalListener.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\EvalListener.cs",
-              "RelativeToolTip": "Cviko7\\EvalListener.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T11:06:36.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VerbroseErrorListener.cs",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\VerbroseErrorListener.cs",
-              "RelativeDocumentMoniker": "Cviko7\\VerbroseErrorListener.cs",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\VerbroseErrorListener.cs",
-              "RelativeToolTip": "Cviko7\\VerbroseErrorListener.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T11:05:36.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Expr.g4",
-              "DocumentMoniker": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Expr.g4",
-              "RelativeDocumentMoniker": "Cviko7\\Expr.g4",
-              "ToolTip": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\Cviko7\\Expr.g4",
-              "RelativeToolTip": "Cviko7\\Expr.g4",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "ANTLRGrammar.g4",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
+              "RelativeDocumentMoniker": "NewVersion\\ANTLRGrammar.g4",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
+              "RelativeToolTip": "NewVersion\\ANTLRGrammar.g4",
+              "ViewState": "AQIAABsAAAAAAAAAAAAkwCEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-26T11:01:50.249Z",
+              "WhenOpened": "2024-04-05T19:46:23.727Z",
               "EditorCaption": ""
             }
           ]
