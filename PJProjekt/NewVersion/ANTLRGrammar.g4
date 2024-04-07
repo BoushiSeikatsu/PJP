@@ -10,14 +10,12 @@ statement
     | READ IDENTIFIER (',' IDENTIFIER)* ';'          # readId
     | WRITE expr (',' expr)* ';'         # writeId
     | '{' statement+ '}'                             # blockStatements
-    | IF '('joinedCondition')' statement (ELSE statement)?     # condStatement
-    | WHILE '('joinedCondition')' statement          # loopStatement
+    | IF '('expr')' statement (ELSE statement)?     # condStatement
+    | WHILE '('expr')' statement          # whileLoopStatement
     ;
 
 condition
-    : expr COMPARER expr (condition)*                # multipleExprCmp
-    | expr EQUALITY expr (condition)*                # multipleExprEq
-    | expr                                           # singleExpr
+    : expr                                           # singleExpr
     ;
 
 joinedCondition
@@ -77,9 +75,11 @@ COMPARER : '>' | '<' ;
 EQUALITY : '==' | '!=';
 LOGICALOR : '||';
 LOGICALAND : '&&';
+BOOL: 'true' | 'false';
 STRING: '"'(.)*?'"';
 IDENTIFIER : [a-zA-Z][a-zA-Z0-9]* ; 
 FLOAT : [0-9]+'.'[0-9]+ ;
 INT : [0-9]+ ;
-BOOL: 'true' | 'false';
 WS : [ \t\r\n]+ -> skip ; // toss out whitespace
+COMMENT: '/*' .*? '*/' -> skip;
+LINE_COMMENT: '//' ~[\r\n]* -> skip;

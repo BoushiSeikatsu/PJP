@@ -51,36 +51,6 @@ public partial class ANTLRGrammarBaseListener : IANTLRGrammarListener {
 	public virtual void ExitSingleExpr([NotNull] ANTLRGrammarParser.SingleExprContext context) { }
 
 	/// <summary>
-	/// Enter a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context) { }
-
-	/// <summary>
 	/// Enter a parse tree produced by the <c>emptyStatement</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -111,6 +81,21 @@ public partial class ANTLRGrammarBaseListener : IANTLRGrammarListener {
 	public virtual void ExitWriteId([NotNull] ANTLRGrammarParser.WriteIdContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by the <c>readId</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -139,21 +124,6 @@ public partial class ANTLRGrammarBaseListener : IANTLRGrammarListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitBlockStatements([NotNull] ANTLRGrammarParser.BlockStatementsContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by the <c>declaration</c>

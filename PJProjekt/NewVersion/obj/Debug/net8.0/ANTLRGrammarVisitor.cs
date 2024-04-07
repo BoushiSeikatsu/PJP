@@ -41,22 +41,6 @@ public interface IANTLRGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitSingleExpr([NotNull] ANTLRGrammarParser.SingleExprContext context);
 
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context);
-
-	/// <summary>
-	/// Visit a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context);
-
-	/// <summary>
 	/// Visit a parse tree produced by the <c>emptyStatement</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// </summary>
@@ -73,6 +57,14 @@ public interface IANTLRGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitWriteId([NotNull] ANTLRGrammarParser.WriteIdContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by the <c>readId</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// </summary>
@@ -87,14 +79,6 @@ public interface IANTLRGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitBlockStatements([NotNull] ANTLRGrammarParser.BlockStatementsContext context);
-
-	/// <summary>
-	/// Visit a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by the <c>declaration</c>

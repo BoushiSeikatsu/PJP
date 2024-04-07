@@ -47,30 +47,6 @@ public partial class ANTLRGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<
 	public virtual Result VisitSingleExpr([NotNull] ANTLRGrammarParser.SingleExprContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context) { return VisitChildren(context); }
-
-	/// <summary>
-	/// Visit a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context) { return VisitChildren(context); }
-
-	/// <summary>
 	/// Visit a parse tree produced by the <c>emptyStatement</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// <para>
@@ -95,6 +71,18 @@ public partial class ANTLRGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<
 	public virtual Result VisitWriteId([NotNull] ANTLRGrammarParser.WriteIdContext context) { return VisitChildren(context); }
 
 	/// <summary>
+	/// Visit a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context) { return VisitChildren(context); }
+
+	/// <summary>
 	/// Visit a parse tree produced by the <c>readId</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// <para>
@@ -117,18 +105,6 @@ public partial class ANTLRGrammarBaseVisitor<Result> : AbstractParseTreeVisitor<
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitBlockStatements([NotNull] ANTLRGrammarParser.BlockStatementsContext context) { return VisitChildren(context); }
-
-	/// <summary>
-	/// Visit a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context) { return VisitChildren(context); }
 
 	/// <summary>
 	/// Visit a parse tree produced by the <c>declaration</c>

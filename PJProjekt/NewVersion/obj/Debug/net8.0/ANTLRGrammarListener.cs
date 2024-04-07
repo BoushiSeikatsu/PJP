@@ -45,32 +45,6 @@ public interface IANTLRGrammarListener : IParseTreeListener {
 	void ExitSingleExpr([NotNull] ANTLRGrammarParser.SingleExprContext context);
 
 	/// <summary>
-	/// Enter a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>multipleExprEq</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitMultipleExprEq([NotNull] ANTLRGrammarParser.MultipleExprEqContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>multipleExprCmp</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.condition"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitMultipleExprCmp([NotNull] ANTLRGrammarParser.MultipleExprCmpContext context);
-
-	/// <summary>
 	/// Enter a parse tree produced by the <c>emptyStatement</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// </summary>
@@ -97,6 +71,19 @@ public interface IANTLRGrammarListener : IParseTreeListener {
 	void ExitWriteId([NotNull] ANTLRGrammarParser.WriteIdContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>whileLoopStatement</c>
+	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitWhileLoopStatement([NotNull] ANTLRGrammarParser.WhileLoopStatementContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by the <c>readId</c>
 	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
 	/// </summary>
@@ -121,19 +108,6 @@ public interface IANTLRGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitBlockStatements([NotNull] ANTLRGrammarParser.BlockStatementsContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>loopStatement</c>
-	/// labeled alternative in <see cref="ANTLRGrammarParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitLoopStatement([NotNull] ANTLRGrammarParser.LoopStatementContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by the <c>declaration</c>

@@ -19,13 +19,19 @@ namespace NewVersion
 
             parser.AddErrorListener(new VerboseErrorListener());
             IParseTree tree = parser.program();
-
+            TypeListener typeChecker = new TypeListener();
             if (parser.NumberOfSyntaxErrors == 0)
             {
                 //Console.WriteLine(tree.ToStringTree(parser));
                 ParseTreeWalker walker = new ParseTreeWalker();
-                walker.Walk(new TypeListener(), tree);
+                walker.Walk(typeChecker, tree);
             }
+            foreach(var error in typeChecker.errors)
+            {
+                Console.WriteLine(error);
+            }
+            var parseTreeString = ParseTreePrinter.Print(tree, parser.Context);
+            //Console.WriteLine(parseTreeString);
         }
     }
 }

@@ -34,8 +34,8 @@ public partial class ANTLRGrammarParser : Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, INT_KEYWORD=5, FLOAT_KEYWORD=6, BOOL_KEYWORD=7, 
 		STRING_KEYWORD=8, IF=9, ELSE=10, READ=11, WRITE=12, WHILE=13, SEMI=14, 
 		COMMA=15, DOT=16, NOT=17, MOD=18, MUL=19, DIV=20, ADD=21, SUB=22, ASSIGNMENT=23, 
-		COMPARER=24, EQUALITY=25, LOGICALOR=26, LOGICALAND=27, STRING=28, IDENTIFIER=29, 
-		FLOAT=30, INT=31, BOOL=32, WS=33;
+		COMPARER=24, EQUALITY=25, LOGICALOR=26, LOGICALAND=27, BOOL=28, STRING=29, 
+		IDENTIFIER=30, FLOAT=31, INT=32, WS=33, COMMENT=34, LINE_COMMENT=35;
 	public const int
 		RULE_program = 0, RULE_statement = 1, RULE_condition = 2, RULE_joinedCondition = 3, 
 		RULE_expr = 4, RULE_primitiveType = 5;
@@ -52,8 +52,8 @@ public partial class ANTLRGrammarParser : Parser {
 		null, null, null, null, null, "INT_KEYWORD", "FLOAT_KEYWORD", "BOOL_KEYWORD", 
 		"STRING_KEYWORD", "IF", "ELSE", "READ", "WRITE", "WHILE", "SEMI", "COMMA", 
 		"DOT", "NOT", "MOD", "MUL", "DIV", "ADD", "SUB", "ASSIGNMENT", "COMPARER", 
-		"EQUALITY", "LOGICALOR", "LOGICALAND", "STRING", "IDENTIFIER", "FLOAT", 
-		"INT", "BOOL", "WS"
+		"EQUALITY", "LOGICALOR", "LOGICALAND", "BOOL", "STRING", "IDENTIFIER", 
+		"FLOAT", "INT", "WS", "COMMENT", "LINE_COMMENT"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -152,7 +152,7 @@ public partial class ANTLRGrammarParser : Parser {
 				State = 15;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << INT_KEYWORD) | (1L << FLOAT_KEYWORD) | (1L << BOOL_KEYWORD) | (1L << STRING_KEYWORD) | (1L << IF) | (1L << READ) | (1L << WRITE) | (1L << WHILE) | (1L << SEMI) | (1L << NOT) | (1L << SUB) | (1L << STRING) | (1L << IDENTIFIER) | (1L << FLOAT) | (1L << INT) | (1L << BOOL))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << INT_KEYWORD) | (1L << FLOAT_KEYWORD) | (1L << BOOL_KEYWORD) | (1L << STRING_KEYWORD) | (1L << IF) | (1L << READ) | (1L << WRITE) | (1L << WHILE) | (1L << SEMI) | (1L << NOT) | (1L << SUB) | (1L << BOOL) | (1L << STRING) | (1L << IDENTIFIER) | (1L << FLOAT) | (1L << INT))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -218,6 +218,29 @@ public partial class ANTLRGrammarParser : Parser {
 			else return visitor.VisitChildren(this);
 		}
 	}
+	public partial class WhileLoopStatementContext : StatementContext {
+		public ITerminalNode WHILE() { return GetToken(ANTLRGrammarParser.WHILE, 0); }
+		public ExprContext expr() {
+			return GetRuleContext<ExprContext>(0);
+		}
+		public StatementContext statement() {
+			return GetRuleContext<StatementContext>(0);
+		}
+		public WhileLoopStatementContext(StatementContext context) { CopyFrom(context); }
+		public override void EnterRule(IParseTreeListener listener) {
+			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
+			if (typedListener != null) typedListener.EnterWhileLoopStatement(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
+			if (typedListener != null) typedListener.ExitWhileLoopStatement(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IANTLRGrammarVisitor<TResult> typedVisitor = visitor as IANTLRGrammarVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitWhileLoopStatement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
 	public partial class ReadIdContext : StatementContext {
 		public ITerminalNode READ() { return GetToken(ANTLRGrammarParser.READ, 0); }
 		public ITerminalNode[] IDENTIFIER() { return GetTokens(ANTLRGrammarParser.IDENTIFIER); }
@@ -261,29 +284,6 @@ public partial class ANTLRGrammarParser : Parser {
 			else return visitor.VisitChildren(this);
 		}
 	}
-	public partial class LoopStatementContext : StatementContext {
-		public ITerminalNode WHILE() { return GetToken(ANTLRGrammarParser.WHILE, 0); }
-		public JoinedConditionContext joinedCondition() {
-			return GetRuleContext<JoinedConditionContext>(0);
-		}
-		public StatementContext statement() {
-			return GetRuleContext<StatementContext>(0);
-		}
-		public LoopStatementContext(StatementContext context) { CopyFrom(context); }
-		public override void EnterRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.EnterLoopStatement(this);
-		}
-		public override void ExitRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.ExitLoopStatement(this);
-		}
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IANTLRGrammarVisitor<TResult> typedVisitor = visitor as IANTLRGrammarVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLoopStatement(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
 	public partial class DeclarationContext : StatementContext {
 		public PrimitiveTypeContext primitiveType() {
 			return GetRuleContext<PrimitiveTypeContext>(0);
@@ -309,8 +309,8 @@ public partial class ANTLRGrammarParser : Parser {
 	}
 	public partial class CondStatementContext : StatementContext {
 		public ITerminalNode IF() { return GetToken(ANTLRGrammarParser.IF, 0); }
-		public JoinedConditionContext joinedCondition() {
-			return GetRuleContext<JoinedConditionContext>(0);
+		public ExprContext expr() {
+			return GetRuleContext<ExprContext>(0);
 		}
 		public StatementContext[] statement() {
 			return GetRuleContexts<StatementContext>();
@@ -399,11 +399,11 @@ public partial class ANTLRGrammarParser : Parser {
 			case T__2:
 			case NOT:
 			case SUB:
+			case BOOL:
 			case STRING:
 			case IDENTIFIER:
 			case FLOAT:
 			case INT:
-			case BOOL:
 				_localctx = new PrintExprContext(_localctx);
 				EnterOuterAlt(_localctx, 3);
 				{
@@ -474,7 +474,7 @@ public partial class ANTLRGrammarParser : Parser {
 					State = 57;
 					_errHandler.Sync(this);
 					_la = _input.La(1);
-				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << INT_KEYWORD) | (1L << FLOAT_KEYWORD) | (1L << BOOL_KEYWORD) | (1L << STRING_KEYWORD) | (1L << IF) | (1L << READ) | (1L << WRITE) | (1L << WHILE) | (1L << SEMI) | (1L << NOT) | (1L << SUB) | (1L << STRING) | (1L << IDENTIFIER) | (1L << FLOAT) | (1L << INT) | (1L << BOOL))) != 0) );
+				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << INT_KEYWORD) | (1L << FLOAT_KEYWORD) | (1L << BOOL_KEYWORD) | (1L << STRING_KEYWORD) | (1L << IF) | (1L << READ) | (1L << WRITE) | (1L << WHILE) | (1L << SEMI) | (1L << NOT) | (1L << SUB) | (1L << BOOL) | (1L << STRING) | (1L << IDENTIFIER) | (1L << FLOAT) | (1L << INT))) != 0) );
 				State = 59; Match(T__1);
 				}
 				break;
@@ -484,7 +484,7 @@ public partial class ANTLRGrammarParser : Parser {
 				{
 				State = 61; Match(IF);
 				State = 62; Match(T__2);
-				State = 63; joinedCondition();
+				State = 63; expr(0);
 				State = 64; Match(T__3);
 				State = 65; statement();
 				State = 68;
@@ -500,12 +500,12 @@ public partial class ANTLRGrammarParser : Parser {
 				}
 				break;
 			case WHILE:
-				_localctx = new LoopStatementContext(_localctx);
+				_localctx = new WhileLoopStatementContext(_localctx);
 				EnterOuterAlt(_localctx, 8);
 				{
 				State = 70; Match(WHILE);
 				State = 71; Match(T__2);
-				State = 72; joinedCondition();
+				State = 72; expr(0);
 				State = 73; Match(T__3);
 				State = 74; statement();
 				}
@@ -556,131 +556,16 @@ public partial class ANTLRGrammarParser : Parser {
 			else return visitor.VisitChildren(this);
 		}
 	}
-	public partial class MultipleExprEqContext : ConditionContext {
-		public ExprContext[] expr() {
-			return GetRuleContexts<ExprContext>();
-		}
-		public ExprContext expr(int i) {
-			return GetRuleContext<ExprContext>(i);
-		}
-		public ITerminalNode EQUALITY() { return GetToken(ANTLRGrammarParser.EQUALITY, 0); }
-		public ConditionContext[] condition() {
-			return GetRuleContexts<ConditionContext>();
-		}
-		public ConditionContext condition(int i) {
-			return GetRuleContext<ConditionContext>(i);
-		}
-		public MultipleExprEqContext(ConditionContext context) { CopyFrom(context); }
-		public override void EnterRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.EnterMultipleExprEq(this);
-		}
-		public override void ExitRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.ExitMultipleExprEq(this);
-		}
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IANTLRGrammarVisitor<TResult> typedVisitor = visitor as IANTLRGrammarVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMultipleExprEq(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-	public partial class MultipleExprCmpContext : ConditionContext {
-		public ExprContext[] expr() {
-			return GetRuleContexts<ExprContext>();
-		}
-		public ExprContext expr(int i) {
-			return GetRuleContext<ExprContext>(i);
-		}
-		public ITerminalNode COMPARER() { return GetToken(ANTLRGrammarParser.COMPARER, 0); }
-		public ConditionContext[] condition() {
-			return GetRuleContexts<ConditionContext>();
-		}
-		public ConditionContext condition(int i) {
-			return GetRuleContext<ConditionContext>(i);
-		}
-		public MultipleExprCmpContext(ConditionContext context) { CopyFrom(context); }
-		public override void EnterRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.EnterMultipleExprCmp(this);
-		}
-		public override void ExitRule(IParseTreeListener listener) {
-			IANTLRGrammarListener typedListener = listener as IANTLRGrammarListener;
-			if (typedListener != null) typedListener.ExitMultipleExprCmp(this);
-		}
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IANTLRGrammarVisitor<TResult> typedVisitor = visitor as IANTLRGrammarVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMultipleExprCmp(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
 
 	[RuleVersion(0)]
 	public ConditionContext condition() {
 		ConditionContext _localctx = new ConditionContext(_ctx, State);
 		EnterRule(_localctx, 4, RULE_condition);
 		try {
-			int _alt;
-			State = 97;
-			_errHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(_input,9,_ctx) ) {
-			case 1:
-				_localctx = new MultipleExprCmpContext(_localctx);
-				EnterOuterAlt(_localctx, 1);
-				{
-				State = 78; expr(0);
-				State = 79; Match(COMPARER);
-				State = 80; expr(0);
-				State = 84;
-				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,7,_ctx);
-				while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
-					if ( _alt==1 ) {
-						{
-						{
-						State = 81; condition();
-						}
-						} 
-					}
-					State = 86;
-					_errHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(_input,7,_ctx);
-				}
-				}
-				break;
-
-			case 2:
-				_localctx = new MultipleExprEqContext(_localctx);
-				EnterOuterAlt(_localctx, 2);
-				{
-				State = 87; expr(0);
-				State = 88; Match(EQUALITY);
-				State = 89; expr(0);
-				State = 93;
-				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,8,_ctx);
-				while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
-					if ( _alt==1 ) {
-						{
-						{
-						State = 90; condition();
-						}
-						} 
-					}
-					State = 95;
-					_errHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(_input,8,_ctx);
-				}
-				}
-				break;
-
-			case 3:
-				_localctx = new SingleExprContext(_localctx);
-				EnterOuterAlt(_localctx, 3);
-				{
-				State = 96; expr(0);
-				}
-				break;
+			_localctx = new SingleExprContext(_localctx);
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 78; expr(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -777,16 +662,16 @@ public partial class ANTLRGrammarParser : Parser {
 		JoinedConditionContext _localctx = new JoinedConditionContext(_ctx, State);
 		EnterRule(_localctx, 6, RULE_joinedCondition);
 		try {
-			State = 108;
+			State = 89;
 			_errHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(_input,10,_ctx) ) {
+			switch ( Interpreter.AdaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				_localctx = new MultipleCondsAndContext(_localctx);
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 99; condition();
-				State = 100; Match(LOGICALAND);
-				State = 101; joinedCondition();
+				State = 80; condition();
+				State = 81; Match(LOGICALAND);
+				State = 82; joinedCondition();
 				}
 				break;
 
@@ -794,9 +679,9 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new MultipleCondsOrContext(_localctx);
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 103; condition();
-				State = 104; Match(LOGICALOR);
-				State = 105; joinedCondition();
+				State = 84; condition();
+				State = 85; Match(LOGICALOR);
+				State = 86; joinedCondition();
 				}
 				break;
 
@@ -804,7 +689,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new SingleCondContext(_localctx);
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 107; condition();
+				State = 88; condition();
 				}
 				break;
 			}
@@ -1208,9 +1093,9 @@ public partial class ANTLRGrammarParser : Parser {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 127;
+			State = 108;
 			_errHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(_input,11,_ctx) ) {
+			switch ( Interpreter.AdaptivePredict(_input,8,_ctx) ) {
 			case 1:
 				{
 				_localctx = new ArNegationContext(_localctx);
@@ -1218,9 +1103,9 @@ public partial class ANTLRGrammarParser : Parser {
 				_prevctx = _localctx;
 
 				{
-				State = 111; ((ArNegationContext)_localctx).op = Match(SUB);
+				State = 92; ((ArNegationContext)_localctx).op = Match(SUB);
 				}
-				State = 112; expr(17);
+				State = 93; expr(17);
 				}
 				break;
 
@@ -1230,9 +1115,9 @@ public partial class ANTLRGrammarParser : Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 				{
-				State = 113; ((LgNegationContext)_localctx).op = Match(NOT);
+				State = 94; ((LgNegationContext)_localctx).op = Match(NOT);
 				}
-				State = 114; expr(16);
+				State = 95; expr(16);
 				}
 				break;
 
@@ -1241,7 +1126,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new IntContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 115; Match(INT);
+				State = 96; Match(INT);
 				}
 				break;
 
@@ -1250,7 +1135,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new IdContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 116; Match(IDENTIFIER);
+				State = 97; Match(IDENTIFIER);
 				}
 				break;
 
@@ -1259,7 +1144,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new FloatContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 117; Match(FLOAT);
+				State = 98; Match(FLOAT);
 				}
 				break;
 
@@ -1268,7 +1153,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new StringContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 118; Match(STRING);
+				State = 99; Match(STRING);
 				}
 				break;
 
@@ -1277,7 +1162,7 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new BoolContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 119; Match(BOOL);
+				State = 100; Match(BOOL);
 				}
 				break;
 
@@ -1286,9 +1171,9 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new ParensContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 120; Match(T__2);
-				State = 121; expr(0);
-				State = 122; Match(T__3);
+				State = 101; Match(T__2);
+				State = 102; expr(0);
+				State = 103; Match(T__3);
 				}
 				break;
 
@@ -1297,31 +1182,31 @@ public partial class ANTLRGrammarParser : Parser {
 				_localctx = new AssignmentContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				State = 124; Match(IDENTIFIER);
-				State = 125; Match(ASSIGNMENT);
-				State = 126; expr(1);
+				State = 105; Match(IDENTIFIER);
+				State = 106; Match(ASSIGNMENT);
+				State = 107; expr(1);
 				}
 				break;
 			}
 			_ctx.stop = _input.Lt(-1);
-			State = 155;
+			State = 136;
 			_errHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(_input,13,_ctx);
+			_alt = Interpreter.AdaptivePredict(_input,10,_ctx);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 153;
+					State = 134;
 					_errHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(_input,12,_ctx) ) {
+					switch ( Interpreter.AdaptivePredict(_input,9,_ctx) ) {
 					case 1:
 						{
 						_localctx = new MulDivContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 129;
+						State = 110;
 						if (!(Precpred(_ctx, 15))) throw new FailedPredicateException(this, "Precpred(_ctx, 15)");
-						State = 130;
+						State = 111;
 						((MulDivContext)_localctx).op = _input.Lt(1);
 						_la = _input.La(1);
 						if ( !(_la==MUL || _la==DIV) ) {
@@ -1334,7 +1219,7 @@ public partial class ANTLRGrammarParser : Parser {
 							_errHandler.ReportMatch(this);
 							Consume();
 						}
-						State = 131; expr(16);
+						State = 112; expr(16);
 						}
 						break;
 
@@ -1342,10 +1227,10 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new ModuloContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 132;
+						State = 113;
 						if (!(Precpred(_ctx, 14))) throw new FailedPredicateException(this, "Precpred(_ctx, 14)");
-						State = 133; Match(MOD);
-						State = 134; expr(15);
+						State = 114; Match(MOD);
+						State = 115; expr(15);
 						}
 						break;
 
@@ -1353,9 +1238,9 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new AddSubContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 135;
+						State = 116;
 						if (!(Precpred(_ctx, 13))) throw new FailedPredicateException(this, "Precpred(_ctx, 13)");
-						State = 136;
+						State = 117;
 						((AddSubContext)_localctx).op = _input.Lt(1);
 						_la = _input.La(1);
 						if ( !(_la==ADD || _la==SUB) ) {
@@ -1368,7 +1253,7 @@ public partial class ANTLRGrammarParser : Parser {
 							_errHandler.ReportMatch(this);
 							Consume();
 						}
-						State = 137; expr(14);
+						State = 118; expr(14);
 						}
 						break;
 
@@ -1376,10 +1261,10 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new ConcatContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 138;
+						State = 119;
 						if (!(Precpred(_ctx, 12))) throw new FailedPredicateException(this, "Precpred(_ctx, 12)");
-						State = 139; Match(DOT);
-						State = 140; expr(13);
+						State = 120; Match(DOT);
+						State = 121; expr(13);
 						}
 						break;
 
@@ -1387,12 +1272,12 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new CompareContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 141;
+						State = 122;
 						if (!(Precpred(_ctx, 11))) throw new FailedPredicateException(this, "Precpred(_ctx, 11)");
 						{
-						State = 142; ((CompareContext)_localctx).op = Match(COMPARER);
+						State = 123; ((CompareContext)_localctx).op = Match(COMPARER);
 						}
-						State = 143; expr(12);
+						State = 124; expr(12);
 						}
 						break;
 
@@ -1400,12 +1285,12 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new EqualityContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 144;
+						State = 125;
 						if (!(Precpred(_ctx, 10))) throw new FailedPredicateException(this, "Precpred(_ctx, 10)");
 						{
-						State = 145; ((EqualityContext)_localctx).op = Match(EQUALITY);
+						State = 126; ((EqualityContext)_localctx).op = Match(EQUALITY);
 						}
-						State = 146; expr(11);
+						State = 127; expr(11);
 						}
 						break;
 
@@ -1413,12 +1298,12 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new LogicalAndContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 147;
+						State = 128;
 						if (!(Precpred(_ctx, 9))) throw new FailedPredicateException(this, "Precpred(_ctx, 9)");
 						{
-						State = 148; ((LogicalAndContext)_localctx).op = Match(LOGICALAND);
+						State = 129; ((LogicalAndContext)_localctx).op = Match(LOGICALAND);
 						}
-						State = 149; expr(10);
+						State = 130; expr(10);
 						}
 						break;
 
@@ -1426,20 +1311,20 @@ public partial class ANTLRGrammarParser : Parser {
 						{
 						_localctx = new LogicalOrContext(new ExprContext(_parentctx, _parentState));
 						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 150;
+						State = 131;
 						if (!(Precpred(_ctx, 8))) throw new FailedPredicateException(this, "Precpred(_ctx, 8)");
 						{
-						State = 151; ((LogicalOrContext)_localctx).op = Match(LOGICALOR);
+						State = 132; ((LogicalOrContext)_localctx).op = Match(LOGICALOR);
 						}
-						State = 152; expr(9);
+						State = 133; expr(9);
 						}
 						break;
 					}
 					} 
 				}
-				State = 157;
+				State = 138;
 				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,13,_ctx);
+				_alt = Interpreter.AdaptivePredict(_input,10,_ctx);
 			}
 			}
 		}
@@ -1485,31 +1370,31 @@ public partial class ANTLRGrammarParser : Parser {
 		PrimitiveTypeContext _localctx = new PrimitiveTypeContext(_ctx, State);
 		EnterRule(_localctx, 10, RULE_primitiveType);
 		try {
-			State = 162;
+			State = 143;
 			_errHandler.Sync(this);
 			switch (_input.La(1)) {
 			case INT_KEYWORD:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 158; _localctx.type = Match(INT_KEYWORD);
+				State = 139; _localctx.type = Match(INT_KEYWORD);
 				}
 				break;
 			case FLOAT_KEYWORD:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 159; _localctx.type = Match(FLOAT_KEYWORD);
+				State = 140; _localctx.type = Match(FLOAT_KEYWORD);
 				}
 				break;
 			case BOOL_KEYWORD:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 160; _localctx.type = Match(BOOL_KEYWORD);
+				State = 141; _localctx.type = Match(BOOL_KEYWORD);
 				}
 				break;
 			case STRING_KEYWORD:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 161; _localctx.type = Match(STRING_KEYWORD);
+				State = 142; _localctx.type = Match(STRING_KEYWORD);
 				}
 				break;
 			default:
@@ -1555,71 +1440,62 @@ public partial class ANTLRGrammarParser : Parser {
 	}
 
 	public static readonly string _serializedATN =
-		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3#\xA7\x4\x2\t\x2"+
+		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3%\x94\x4\x2\t\x2"+
 		"\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x3\x2\x6\x2\x10"+
 		"\n\x2\r\x2\xE\x2\x11\x3\x3\x3\x3\x3\x3\x3\x3\a\x3\x18\n\x3\f\x3\xE\x3"+
 		"\x1B\v\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3"+
 		"\a\x3\'\n\x3\f\x3\xE\x3*\v\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\a\x3\x31\n"+
 		"\x3\f\x3\xE\x3\x34\v\x3\x3\x3\x3\x3\x3\x3\x3\x3\x6\x3:\n\x3\r\x3\xE\x3"+
 		";\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x5\x3G\n\x3\x3"+
-		"\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x5\x3O\n\x3\x3\x4\x3\x4\x3\x4\x3\x4"+
-		"\a\x4U\n\x4\f\x4\xE\x4X\v\x4\x3\x4\x3\x4\x3\x4\x3\x4\a\x4^\n\x4\f\x4\xE"+
-		"\x4\x61\v\x4\x3\x4\x5\x4\x64\n\x4\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5"+
-		"\x3\x5\x3\x5\x3\x5\x5\x5o\n\x5\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3"+
-		"\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x5\x6"+
-		"\x82\n\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6"+
-		"\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3"+
-		"\x6\x3\x6\x3\x6\a\x6\x9C\n\x6\f\x6\xE\x6\x9F\v\x6\x3\a\x3\a\x3\a\x3\a"+
-		"\x5\a\xA5\n\a\x3\a\x2\x2\x3\n\b\x2\x2\x4\x2\x6\x2\b\x2\n\x2\f\x2\x2\x4"+
-		"\x3\x2\x15\x16\x3\x2\x17\x18\xC6\x2\xF\x3\x2\x2\x2\x4N\x3\x2\x2\x2\x6"+
-		"\x63\x3\x2\x2\x2\bn\x3\x2\x2\x2\n\x81\x3\x2\x2\x2\f\xA4\x3\x2\x2\x2\xE"+
-		"\x10\x5\x4\x3\x2\xF\xE\x3\x2\x2\x2\x10\x11\x3\x2\x2\x2\x11\xF\x3\x2\x2"+
-		"\x2\x11\x12\x3\x2\x2\x2\x12\x3\x3\x2\x2\x2\x13\x14\x5\f\a\x2\x14\x19\a"+
-		"\x1F\x2\x2\x15\x16\a\x11\x2\x2\x16\x18\a\x1F\x2\x2\x17\x15\x3\x2\x2\x2"+
-		"\x18\x1B\x3\x2\x2\x2\x19\x17\x3\x2\x2\x2\x19\x1A\x3\x2\x2\x2\x1A\x1C\x3"+
-		"\x2\x2\x2\x1B\x19\x3\x2\x2\x2\x1C\x1D\a\x10\x2\x2\x1DO\x3\x2\x2\x2\x1E"+
-		"O\a\x10\x2\x2\x1F \x5\n\x6\x2 !\a\x10\x2\x2!O\x3\x2\x2\x2\"#\a\r\x2\x2"+
-		"#(\a\x1F\x2\x2$%\a\x11\x2\x2%\'\a\x1F\x2\x2&$\x3\x2\x2\x2\'*\x3\x2\x2"+
+		"\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x3\x5\x3O\n\x3\x3\x4\x3\x4\x3\x5\x3\x5"+
+		"\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x5\x5\\\n\x5\x3\x6\x3\x6\x3"+
+		"\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6"+
+		"\x3\x6\x3\x6\x3\x6\x5\x6o\n\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3"+
+		"\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6"+
+		"\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\x3\x6\a\x6\x89\n\x6\f\x6\xE\x6\x8C\v\x6"+
+		"\x3\a\x3\a\x3\a\x3\a\x5\a\x92\n\a\x3\a\x2\x2\x3\n\b\x2\x2\x4\x2\x6\x2"+
+		"\b\x2\n\x2\f\x2\x2\x4\x3\x2\x15\x16\x3\x2\x17\x18\xAF\x2\xF\x3\x2\x2\x2"+
+		"\x4N\x3\x2\x2\x2\x6P\x3\x2\x2\x2\b[\x3\x2\x2\x2\nn\x3\x2\x2\x2\f\x91\x3"+
+		"\x2\x2\x2\xE\x10\x5\x4\x3\x2\xF\xE\x3\x2\x2\x2\x10\x11\x3\x2\x2\x2\x11"+
+		"\xF\x3\x2\x2\x2\x11\x12\x3\x2\x2\x2\x12\x3\x3\x2\x2\x2\x13\x14\x5\f\a"+
+		"\x2\x14\x19\a \x2\x2\x15\x16\a\x11\x2\x2\x16\x18\a \x2\x2\x17\x15\x3\x2"+
+		"\x2\x2\x18\x1B\x3\x2\x2\x2\x19\x17\x3\x2\x2\x2\x19\x1A\x3\x2\x2\x2\x1A"+
+		"\x1C\x3\x2\x2\x2\x1B\x19\x3\x2\x2\x2\x1C\x1D\a\x10\x2\x2\x1DO\x3\x2\x2"+
+		"\x2\x1EO\a\x10\x2\x2\x1F \x5\n\x6\x2 !\a\x10\x2\x2!O\x3\x2\x2\x2\"#\a"+
+		"\r\x2\x2#(\a \x2\x2$%\a\x11\x2\x2%\'\a \x2\x2&$\x3\x2\x2\x2\'*\x3\x2\x2"+
 		"\x2(&\x3\x2\x2\x2()\x3\x2\x2\x2)+\x3\x2\x2\x2*(\x3\x2\x2\x2+O\a\x10\x2"+
 		"\x2,-\a\xE\x2\x2-\x32\x5\n\x6\x2./\a\x11\x2\x2/\x31\x5\n\x6\x2\x30.\x3"+
 		"\x2\x2\x2\x31\x34\x3\x2\x2\x2\x32\x30\x3\x2\x2\x2\x32\x33\x3\x2\x2\x2"+
 		"\x33\x35\x3\x2\x2\x2\x34\x32\x3\x2\x2\x2\x35\x36\a\x10\x2\x2\x36O\x3\x2"+
 		"\x2\x2\x37\x39\a\x3\x2\x2\x38:\x5\x4\x3\x2\x39\x38\x3\x2\x2\x2:;\x3\x2"+
 		"\x2\x2;\x39\x3\x2\x2\x2;<\x3\x2\x2\x2<=\x3\x2\x2\x2=>\a\x4\x2\x2>O\x3"+
-		"\x2\x2\x2?@\a\v\x2\x2@\x41\a\x5\x2\x2\x41\x42\x5\b\x5\x2\x42\x43\a\x6"+
+		"\x2\x2\x2?@\a\v\x2\x2@\x41\a\x5\x2\x2\x41\x42\x5\n\x6\x2\x42\x43\a\x6"+
 		"\x2\x2\x43\x46\x5\x4\x3\x2\x44\x45\a\f\x2\x2\x45G\x5\x4\x3\x2\x46\x44"+
 		"\x3\x2\x2\x2\x46G\x3\x2\x2\x2GO\x3\x2\x2\x2HI\a\xF\x2\x2IJ\a\x5\x2\x2"+
-		"JK\x5\b\x5\x2KL\a\x6\x2\x2LM\x5\x4\x3\x2MO\x3\x2\x2\x2N\x13\x3\x2\x2\x2"+
+		"JK\x5\n\x6\x2KL\a\x6\x2\x2LM\x5\x4\x3\x2MO\x3\x2\x2\x2N\x13\x3\x2\x2\x2"+
 		"N\x1E\x3\x2\x2\x2N\x1F\x3\x2\x2\x2N\"\x3\x2\x2\x2N,\x3\x2\x2\x2N\x37\x3"+
-		"\x2\x2\x2N?\x3\x2\x2\x2NH\x3\x2\x2\x2O\x5\x3\x2\x2\x2PQ\x5\n\x6\x2QR\a"+
-		"\x1A\x2\x2RV\x5\n\x6\x2SU\x5\x6\x4\x2TS\x3\x2\x2\x2UX\x3\x2\x2\x2VT\x3"+
-		"\x2\x2\x2VW\x3\x2\x2\x2W\x64\x3\x2\x2\x2XV\x3\x2\x2\x2YZ\x5\n\x6\x2Z["+
-		"\a\x1B\x2\x2[_\x5\n\x6\x2\\^\x5\x6\x4\x2]\\\x3\x2\x2\x2^\x61\x3\x2\x2"+
-		"\x2_]\x3\x2\x2\x2_`\x3\x2\x2\x2`\x64\x3\x2\x2\x2\x61_\x3\x2\x2\x2\x62"+
-		"\x64\x5\n\x6\x2\x63P\x3\x2\x2\x2\x63Y\x3\x2\x2\x2\x63\x62\x3\x2\x2\x2"+
-		"\x64\a\x3\x2\x2\x2\x65\x66\x5\x6\x4\x2\x66g\a\x1D\x2\x2gh\x5\b\x5\x2h"+
-		"o\x3\x2\x2\x2ij\x5\x6\x4\x2jk\a\x1C\x2\x2kl\x5\b\x5\x2lo\x3\x2\x2\x2m"+
-		"o\x5\x6\x4\x2n\x65\x3\x2\x2\x2ni\x3\x2\x2\x2nm\x3\x2\x2\x2o\t\x3\x2\x2"+
-		"\x2pq\b\x6\x1\x2qr\a\x18\x2\x2r\x82\x5\n\x6\x13st\a\x13\x2\x2t\x82\x5"+
-		"\n\x6\x12u\x82\a!\x2\x2v\x82\a\x1F\x2\x2w\x82\a \x2\x2x\x82\a\x1E\x2\x2"+
-		"y\x82\a\"\x2\x2z{\a\x5\x2\x2{|\x5\n\x6\x2|}\a\x6\x2\x2}\x82\x3\x2\x2\x2"+
-		"~\x7F\a\x1F\x2\x2\x7F\x80\a\x19\x2\x2\x80\x82\x5\n\x6\x3\x81p\x3\x2\x2"+
-		"\x2\x81s\x3\x2\x2\x2\x81u\x3\x2\x2\x2\x81v\x3\x2\x2\x2\x81w\x3\x2\x2\x2"+
-		"\x81x\x3\x2\x2\x2\x81y\x3\x2\x2\x2\x81z\x3\x2\x2\x2\x81~\x3\x2\x2\x2\x82"+
-		"\x9D\x3\x2\x2\x2\x83\x84\f\x11\x2\x2\x84\x85\t\x2\x2\x2\x85\x9C\x5\n\x6"+
-		"\x12\x86\x87\f\x10\x2\x2\x87\x88\a\x14\x2\x2\x88\x9C\x5\n\x6\x11\x89\x8A"+
-		"\f\xF\x2\x2\x8A\x8B\t\x3\x2\x2\x8B\x9C\x5\n\x6\x10\x8C\x8D\f\xE\x2\x2"+
-		"\x8D\x8E\a\x12\x2\x2\x8E\x9C\x5\n\x6\xF\x8F\x90\f\r\x2\x2\x90\x91\a\x1A"+
-		"\x2\x2\x91\x9C\x5\n\x6\xE\x92\x93\f\f\x2\x2\x93\x94\a\x1B\x2\x2\x94\x9C"+
-		"\x5\n\x6\r\x95\x96\f\v\x2\x2\x96\x97\a\x1D\x2\x2\x97\x9C\x5\n\x6\f\x98"+
-		"\x99\f\n\x2\x2\x99\x9A\a\x1C\x2\x2\x9A\x9C\x5\n\x6\v\x9B\x83\x3\x2\x2"+
-		"\x2\x9B\x86\x3\x2\x2\x2\x9B\x89\x3\x2\x2\x2\x9B\x8C\x3\x2\x2\x2\x9B\x8F"+
-		"\x3\x2\x2\x2\x9B\x92\x3\x2\x2\x2\x9B\x95\x3\x2\x2\x2\x9B\x98\x3\x2\x2"+
-		"\x2\x9C\x9F\x3\x2\x2\x2\x9D\x9B\x3\x2\x2\x2\x9D\x9E\x3\x2\x2\x2\x9E\v"+
-		"\x3\x2\x2\x2\x9F\x9D\x3\x2\x2\x2\xA0\xA5\a\a\x2\x2\xA1\xA5\a\b\x2\x2\xA2"+
-		"\xA5\a\t\x2\x2\xA3\xA5\a\n\x2\x2\xA4\xA0\x3\x2\x2\x2\xA4\xA1\x3\x2\x2"+
-		"\x2\xA4\xA2\x3\x2\x2\x2\xA4\xA3\x3\x2\x2\x2\xA5\r\x3\x2\x2\x2\x11\x11"+
-		"\x19(\x32;\x46NV_\x63n\x81\x9B\x9D\xA4";
+		"\x2\x2\x2N?\x3\x2\x2\x2NH\x3\x2\x2\x2O\x5\x3\x2\x2\x2PQ\x5\n\x6\x2Q\a"+
+		"\x3\x2\x2\x2RS\x5\x6\x4\x2ST\a\x1D\x2\x2TU\x5\b\x5\x2U\\\x3\x2\x2\x2V"+
+		"W\x5\x6\x4\x2WX\a\x1C\x2\x2XY\x5\b\x5\x2Y\\\x3\x2\x2\x2Z\\\x5\x6\x4\x2"+
+		"[R\x3\x2\x2\x2[V\x3\x2\x2\x2[Z\x3\x2\x2\x2\\\t\x3\x2\x2\x2]^\b\x6\x1\x2"+
+		"^_\a\x18\x2\x2_o\x5\n\x6\x13`\x61\a\x13\x2\x2\x61o\x5\n\x6\x12\x62o\a"+
+		"\"\x2\x2\x63o\a \x2\x2\x64o\a!\x2\x2\x65o\a\x1F\x2\x2\x66o\a\x1E\x2\x2"+
+		"gh\a\x5\x2\x2hi\x5\n\x6\x2ij\a\x6\x2\x2jo\x3\x2\x2\x2kl\a \x2\x2lm\a\x19"+
+		"\x2\x2mo\x5\n\x6\x3n]\x3\x2\x2\x2n`\x3\x2\x2\x2n\x62\x3\x2\x2\x2n\x63"+
+		"\x3\x2\x2\x2n\x64\x3\x2\x2\x2n\x65\x3\x2\x2\x2n\x66\x3\x2\x2\x2ng\x3\x2"+
+		"\x2\x2nk\x3\x2\x2\x2o\x8A\x3\x2\x2\x2pq\f\x11\x2\x2qr\t\x2\x2\x2r\x89"+
+		"\x5\n\x6\x12st\f\x10\x2\x2tu\a\x14\x2\x2u\x89\x5\n\x6\x11vw\f\xF\x2\x2"+
+		"wx\t\x3\x2\x2x\x89\x5\n\x6\x10yz\f\xE\x2\x2z{\a\x12\x2\x2{\x89\x5\n\x6"+
+		"\xF|}\f\r\x2\x2}~\a\x1A\x2\x2~\x89\x5\n\x6\xE\x7F\x80\f\f\x2\x2\x80\x81"+
+		"\a\x1B\x2\x2\x81\x89\x5\n\x6\r\x82\x83\f\v\x2\x2\x83\x84\a\x1D\x2\x2\x84"+
+		"\x89\x5\n\x6\f\x85\x86\f\n\x2\x2\x86\x87\a\x1C\x2\x2\x87\x89\x5\n\x6\v"+
+		"\x88p\x3\x2\x2\x2\x88s\x3\x2\x2\x2\x88v\x3\x2\x2\x2\x88y\x3\x2\x2\x2\x88"+
+		"|\x3\x2\x2\x2\x88\x7F\x3\x2\x2\x2\x88\x82\x3\x2\x2\x2\x88\x85\x3\x2\x2"+
+		"\x2\x89\x8C\x3\x2\x2\x2\x8A\x88\x3\x2\x2\x2\x8A\x8B\x3\x2\x2\x2\x8B\v"+
+		"\x3\x2\x2\x2\x8C\x8A\x3\x2\x2\x2\x8D\x92\a\a\x2\x2\x8E\x92\a\b\x2\x2\x8F"+
+		"\x92\a\t\x2\x2\x90\x92\a\n\x2\x2\x91\x8D\x3\x2\x2\x2\x91\x8E\x3\x2\x2"+
+		"\x2\x91\x8F\x3\x2\x2\x2\x91\x90\x3\x2\x2\x2\x92\r\x3\x2\x2\x2\xE\x11\x19"+
+		"(\x32;\x46N[n\x88\x8A\x91";
 	public static readonly ATN _ATN =
 		new ATNDeserializer().Deserialize(_serializedATN.ToCharArray());
 }
