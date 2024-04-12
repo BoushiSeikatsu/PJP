@@ -16,7 +16,8 @@ statement
     ;
 
 expr
-    : (op=SUB) expr                         # arNegation
+    : '(' expr ')'                          # parens
+    | (op=SUB) expr                         # arNegation
     | (op=NOT) expr                         # lgNegation
     | expr op=(MUL|DIV) expr                # mulDiv
     | expr MOD expr                         # modulo
@@ -31,7 +32,6 @@ expr
     | FLOAT                                 # float
     | STRING                                # string
     | BOOL                                  # bool
-    | '(' expr ')'                          # parens
     | <assoc=right> IDENTIFIER '=' expr     # assignment
     ;
 

@@ -101,7 +101,11 @@ namespace NewVersion
             }
         }
         //EXPRESIONS PART
-
+        public override void ExitParens([NotNull] ANTLRGrammarParser.ParensContext context)
+        {
+            var expression = values.Get(context.expr());
+            values.Put(context, expression);
+        }
         public override void ExitArNegation([NotNull] ANTLRGrammarParser.ArNegationContext context)
         {
             var rightExprValue = values.Get(context.expr());

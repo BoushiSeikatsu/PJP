@@ -20,6 +20,8 @@ namespace NewVersion
             parser.AddErrorListener(new VerboseErrorListener());
             IParseTree tree = parser.program();
             TypeListener typeChecker = new TypeListener();
+            var parseTreeString = ParseTreePrinter.Print(tree, parser.Context);
+            //Console.WriteLine(parseTreeString);
             if (parser.NumberOfSyntaxErrors == 0)
             {
                 //Console.WriteLine(tree.ToStringTree(parser));
@@ -30,8 +32,16 @@ namespace NewVersion
             {
                 Console.WriteLine(error);
             }
-            var parseTreeString = ParseTreePrinter.Print(tree, parser.Context);
-            //Console.WriteLine(parseTreeString);
+            InstructionListener instructionListener = new InstructionListener();
+            if(typeChecker.errors.Count == 0)
+            {
+                ParseTreeWalker walker2 = new ParseTreeWalker();
+                walker2.Walk(instructionListener, tree);
+            }
+            foreach(string s in instructionListener.instructions)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
