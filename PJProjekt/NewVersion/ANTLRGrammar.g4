@@ -12,16 +12,7 @@ statement
     | '{' statement+ '}'                             # blockStatements
     | IF '('expr')' statement (ELSE statement)?     # condStatement
     | WHILE '('expr')' statement          # whileLoopStatement
-    ;
-
-condition
-    : expr                                           # singleExpr
-    ;
-
-joinedCondition
-    : condition LOGICALAND joinedCondition          # multipleCondsAnd
-    | condition LOGICALOR joinedCondition           # multipleCondsOr
-    | condition                                     # singleCond
+    | DO statement WHILE '('expr')' ';'   # doWhile
     ;
 
 expr
@@ -60,6 +51,7 @@ IF: 'if';
 ELSE: 'else';
 READ: 'read';
 WRITE: 'write';
+DO: 'do';
 WHILE: 'while';
 SEMI: ';';
 COMMA: ',';

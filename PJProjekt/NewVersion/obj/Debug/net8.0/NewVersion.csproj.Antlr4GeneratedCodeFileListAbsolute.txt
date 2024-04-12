@@ -1,6 +1,6 @@
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarLexer.cs
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarParser.cs
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarListener.cs
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarBaseListener.cs
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarVisitor.cs
-C:\Users\msi pc\Documents\PythonProjects\PJP\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarBaseVisitor.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarLexer.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarParser.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarListener.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarBaseListener.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarVisitor.cs
+E:\Python Scripts\PJP_Project\PJProjekt\NewVersion\obj\Debug\net8.0\ANTLRGrammarBaseVisitor.cs

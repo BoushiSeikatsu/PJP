@@ -45,7 +45,7 @@ namespace NewVersion
             {
                 if(this.identifiers.Keys.Contains(identifier.GetText()))
                 {
-                    errors.Add("Tato promenná" + identifier.GetText() + "již byla deklarována!");
+                    errors.Add("Tato promenná " + identifier.GetText() + " již byla deklarována!");
                 }
                 else
                 {
@@ -71,6 +71,18 @@ namespace NewVersion
             {
                 Console.WriteLine(pair.Key + ": " + pair.Value);
             }*/
+        }
+        public override void ExitDoWhile([NotNull] ANTLRGrammarParser.DoWhileContext context)
+        {
+            var expr = values.Get(context.expr());
+            if(identifiers.Keys.Contains(expr))
+            {
+                expr = identifiers[expr as string];
+            }
+            if(expr is not bool)
+            {
+                errors.Add("Neplatna podminka ve while, dostali jsme: " + expr.GetType() + " cekali jsme: " + typeof(System.Boolean));
+            }
         }
         public override void ExitCondStatement([NotNull] ANTLRGrammarParser.CondStatementContext context)
         {
@@ -446,39 +458,47 @@ namespace NewVersion
         public override void ExitAssignment([NotNull] ANTLRGrammarParser.AssignmentContext context)
         {
             var identifier = context.IDENTIFIER().GetText();
-            var idValue = this.identifiers[identifier];
-            var rightExprValue = values.Get(context.expr());
-            if (identifiers.Keys.Contains(rightExprValue))
+            if(this.identifiers.Keys.Contains(identifier))
             {
-                rightExprValue = identifiers[rightExprValue as string];
-            }
-            if (rightExprValue?.GetType() == null)
-            {
-                if(idValue.GetType() == typeof(System.Int32))
+                var idValue = this.identifiers[identifier];
+                var rightExprValue = values.Get(context.expr());
+                if (identifiers.Keys.Contains(rightExprValue))
                 {
-                    rightExprValue = (int)0;
+                    rightExprValue = identifiers[rightExprValue as string];
                 }
-                else if(idValue.GetType() == typeof(System.Double))
+                if (rightExprValue?.GetType() == null)
                 {
-                    rightExprValue = Convert.ToDouble(0);
+                    if (idValue.GetType() == typeof(System.Int32))
+                    {
+                        rightExprValue = (int)0;
+                    }
+                    else if (idValue.GetType() == typeof(System.Double))
+                    {
+                        rightExprValue = Convert.ToDouble(0);
+                    }
                 }
-            }
-            if (idValue.GetType() == rightExprValue?.GetType())
-            {
-                values.Put(context, rightExprValue);
-                identifiers[identifier] = rightExprValue;
-            }
-            else
-            {
-                if(idValue.GetType() == typeof(System.Double) && rightExprValue?.GetType() == typeof(System.Int32))
+                if (idValue.GetType() == rightExprValue?.GetType())
                 {
                     values.Put(context, rightExprValue);
-                    identifiers[identifier] = Convert.ToDouble(rightExprValue);
+                    identifiers[identifier] = rightExprValue;
                 }
                 else
                 {
-                    errors.Add("Spatné prirazení hodnoty: " + rightExprValue + " do promenné: " + identifier + ": " + idValue.GetType() + " jelikoz má typ: " + rightExprValue?.GetType());
+                    if (idValue.GetType() == typeof(System.Double) && rightExprValue?.GetType() == typeof(System.Int32))
+                    {
+                        values.Put(context, rightExprValue);
+                        identifiers[identifier] = Convert.ToDouble(rightExprValue);
+                    }
+                    else
+                    {
+                        errors.Add("Spatné prirazení hodnoty: " + rightExprValue + " do promenné: " + identifier + ": " + idValue.GetType() + " jelikoz má typ: " + rightExprValue?.GetType());
+                    }
                 }
+            }
+       
+            else
+            {
+                errors.Add(identifier + " neni deklarovany");
             }
         }
         /*public override void ExitProg([NotNull] ExprParser.ProgContext context)
