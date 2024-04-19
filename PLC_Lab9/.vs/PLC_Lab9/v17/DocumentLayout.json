@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\plc_lab9\\plc_lab9\\typecheckinglistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|solutionrelative:plc_lab9\\typecheckinglistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\plc_lab9\\plc_lab9\\plc_lab9_expr.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|solutionrelative:plc_lab9\\plc_lab9_expr.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\plc_lab9\\plc_lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90DB6743-76D0-414E-AB3A-A924B3B9637E}|PLC_Lab9\\PLC_Lab9.csproj|solutionrelative:plc_lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PLC_Lab9_expr.g4",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\PLC_Lab9_expr.g4",
+              "RelativeDocumentMoniker": "PLC_Lab9\\PLC_Lab9_expr.g4",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\PLC_Lab9_expr.g4",
+              "RelativeToolTip": "PLC_Lab9\\PLC_Lab9_expr.g4",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-19T06:24:38.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\Program.cs",
+              "RelativeDocumentMoniker": "PLC_Lab9\\Program.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\Program.cs",
+              "RelativeToolTip": "PLC_Lab9\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T06:24:26.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TypeCheckingListener.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\TypeCheckingListener.cs",
+              "RelativeDocumentMoniker": "PLC_Lab9\\TypeCheckingListener.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PLC_Lab9\\PLC_Lab9\\TypeCheckingListener.cs",
+              "RelativeToolTip": "PLC_Lab9\\TypeCheckingListener.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T06:20:21.486Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,12 @@ namespace NewVersion
         public List<string> errors = new List<string>();
         Dictionary<string, object> identifiers = new Dictionary<string, object>();
         public List<string> instructions = new List<string>();
+        public ParseTreeProperty<Type> types = new ParseTreeProperty<Type>();
         int labelCounter = 0;
+        public InstructionListener(ParseTreeProperty<Type> types)
+        {
+            this.types = types;
+        }
         public override void ExitString([NotNull] ANTLRGrammarParser.StringContext context)
         {
             values.Put(context, context.STRING().GetText());
@@ -24,6 +29,23 @@ namespace NewVersion
         {
             values.Put(context, Convert.ToInt32(context.INT().GetText(), 10));
             instructions.Add("push I " + context.INT().GetText());
+            var parent = context.Parent;
+            if(parent.ChildCount == 3)
+            {
+                var type = types.Get(parent.GetChild(2));
+                if(type == Type.Float)
+                {
+                    instructions.Add("itof");
+                }
+                else
+                {
+                    type = types.Get(parent.GetChild(0));
+                    if(type == Type.Float)
+                    {
+                        instructions.Add("itof");
+                    }
+                }
+            }
         }
         public override void ExitFloat([NotNull] ANTLRGrammarParser.FloatContext context)
         {
@@ -337,12 +359,19 @@ namespace NewVersion
         public override void ExitPrintExpr([NotNull] ANTLRGrammarParser.PrintExprContext context)
         {
             var expression = values.Get(context.expr());
+            var parent = context.parent;
             if (identifiers.Keys.Contains(expression))
             {
                 instructions.Add("load " + expression);
                 instructions.Add("pop");
             }
-            var parent = context.parent;
+            else if(parent.IsEmpty)
+            {
+                if (context.expr().GetType() != typeof(ANTLRGrammarParser.AssignmentContext))
+                {
+                    instructions.Add("pop");
+                }
+            }
             if (parent.GetType() == typeof(ANTLRGrammarParser.CondStatementContext))
             {
                 if (parent.GetChild(4) == context)
@@ -501,7 +530,20 @@ namespace NewVersion
             }
         }
         //EXPRESIONS PART
-
+        public override void ExitParens([NotNull] ANTLRGrammarParser.ParensContext context)
+        {
+            var expression = values.Get(context.expr());
+            values.Put(context, expression);
+            var parent = context.Parent;
+            if(parent.ChildCount == 3)
+            {
+                var type = types.Get(parent.GetChild(2));
+                if(type == Type.Float)
+                {
+                    instructions.Add("itof");
+                }
+            }
+        }
         public override void ExitArNegation([NotNull] ANTLRGrammarParser.ArNegationContext context)
         {
             var rightExprValue = values.Get(context.expr());
@@ -570,14 +612,6 @@ namespace NewVersion
             {
                 if (leftExprValue is double || rightExprValue is double)
                 {
-                    if(leftExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
-                    if(rightExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals("*"))
@@ -609,14 +643,6 @@ namespace NewVersion
             }
             else if (leftExprValue is double || rightExprValue is double)
             {
-                if (leftExprValue is int)
-                {
-                    instructions.Add("itof");
-                }
-                if (rightExprValue is int)
-                {
-                    instructions.Add("itof");
-                }
                 double left = Convert.ToDouble(leftExprValue);
                 double right = Convert.ToDouble(rightExprValue);
                 if (context.op.Text.Equals("*"))
@@ -680,14 +706,6 @@ namespace NewVersion
             {
                 if (leftExprValue is double || rightExprValue is double)
                 {
-                    if (leftExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
-                    if (rightExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals("+"))
@@ -719,14 +737,6 @@ namespace NewVersion
             }
             else if (leftExprValue is double || rightExprValue is double)
             {
-                if (leftExprValue is int)
-                {
-                    instructions.Add("itof");
-                }
-                if (rightExprValue is int)
-                {
-                    instructions.Add("itof");
-                }
                 double left = Convert.ToDouble(leftExprValue);
                 double right = Convert.ToDouble(rightExprValue);
                 if (context.op.Text.Equals("+"))
@@ -789,14 +799,6 @@ namespace NewVersion
             {
                 if (leftExprValue is double || rightExprValue is double)
                 {
-                    if (leftExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
-                    if (rightExprValue is int)
-                    {
-                        instructions.Add("itof");
-                    }
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals(">"))

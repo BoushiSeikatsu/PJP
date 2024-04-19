@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\instructionlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\instructionlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\instructionlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\instructionlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\typelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\typelistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|solutionrelative:newversion\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1B89D19-794D-4F9C-83DB-0F482CAB1502}|NewVersion\\NewVersion.csproj|c:\\users\\msi pc\\documents\\pythonprojects\\pjp\\pjprojekt\\newversion\\antlrgrammar.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -42,20 +46,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Type.cs",
+              "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Type.cs",
+              "RelativeDocumentMoniker": "NewVersion\\Type.cs",
+              "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Type.cs",
+              "RelativeToolTip": "NewVersion\\Type.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T06:28:08.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InstructionListener.cs",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\InstructionListener.cs",
               "RelativeDocumentMoniker": "NewVersion\\InstructionListener.cs",
               "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\InstructionListener.cs",
               "RelativeToolTip": "NewVersion\\InstructionListener.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAUwLsAAAANAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T11:37:58.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T11:37:58.287Z"
             },
             {
               "$type": "Document",
@@ -65,14 +80,13 @@
               "RelativeDocumentMoniker": "NewVersion\\TypeListener.cs",
               "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\TypeListener.cs",
               "RelativeToolTip": "NewVersion\\TypeListener.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAowGcAAAAbAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwHAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T20:25:48.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-05T20:25:48.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "VerboseErrorListener.cs",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\VerboseErrorListener.cs",
               "RelativeDocumentMoniker": "NewVersion\\VerboseErrorListener.cs",
@@ -84,20 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Program.cs",
               "RelativeDocumentMoniker": "NewVersion\\Program.cs",
               "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\Program.cs",
               "RelativeToolTip": "NewVersion\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAwAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwCwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T19:44:23.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ParseTreePrinter.cs",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\ParseTreePrinter.cs",
               "RelativeDocumentMoniker": "NewVersion\\ParseTreePrinter.cs",
@@ -109,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ExprLexer.cs",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
               "RelativeDocumentMoniker": "Cviko7\\obj\\Debug\\net8.0\\ExprLexer.cs",
@@ -121,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "NewVersion.csproj",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj",
               "RelativeDocumentMoniker": "NewVersion\\NewVersion.csproj",
@@ -139,13 +153,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ANTLRGrammar.g4",
               "DocumentMoniker": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
               "RelativeDocumentMoniker": "NewVersion\\ANTLRGrammar.g4",
               "ToolTip": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\ANTLRGrammar.g4",
               "RelativeToolTip": "NewVersion\\ANTLRGrammar.g4",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAiwCIAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwBQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-05T19:46:23.727Z",
               "EditorCaption": ""

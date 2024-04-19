@@ -13,23 +13,28 @@ namespace NewVersion
     internal class TypeListener : ANTLRGrammarBaseListener
     {
         ParseTreeProperty<object> values = new ParseTreeProperty<object>();
+        public ParseTreeProperty<Type> types = new ParseTreeProperty<Type>();
         public List<string> errors = new List<string>();
         Dictionary<string, object> identifiers = new Dictionary<string, object>();
         public override void ExitString([NotNull] ANTLRGrammarParser.StringContext context)
         {
             values.Put(context, context.STRING().GetText());
+            types.Put(context, Type.String);
         }
         public override void ExitInt([NotNull] ANTLRGrammarParser.IntContext context)
         {
             values.Put(context, Convert.ToInt32(context.INT().GetText(), 10));
+            types.Put(context, Type.Int);
         }
         public override void ExitFloat([NotNull] ANTLRGrammarParser.FloatContext context)
         {
             values.Put(context, Convert.ToDouble(context.FLOAT().GetText()));
+            types.Put(context, Type.Float);
         }
         public override void ExitBool([NotNull] ANTLRGrammarParser.BoolContext context)
         {
             values.Put(context, Convert.ToBoolean(context.BOOL().GetText()));
+            types.Put(context, Type.Boolean);
         }
         
         public override void ExitId([NotNull] ANTLRGrammarParser.IdContext context)
@@ -52,18 +57,22 @@ namespace NewVersion
                     if(primitiveType.GetText() == "string") 
                     {
                         this.identifiers.Add(identifier.GetText(), "");
+                        types.Put(identifier, Type.String);
                     }
                     if (primitiveType.GetText() == "int")
                     {
                         this.identifiers.Add(identifier.GetText(), 0);
+                        types.Put(identifier, Type.Int);
                     }
                     if (primitiveType.GetText() == "float")
                     {
                         this.identifiers.Add(identifier.GetText(), 0.0);
+                        types.Put(identifier, Type.Float);
                     }
                     if (primitiveType.GetText() == "bool")
                     {
                         this.identifiers.Add(identifier.GetText(), false);
+                        types.Put(identifier, Type.Boolean);
                     }
                 }
             }
@@ -105,6 +114,7 @@ namespace NewVersion
         {
             var expression = values.Get(context.expr());
             values.Put(context, expression);
+            types.Put(context, types.Get(context.expr()));
         }
         public override void ExitArNegation([NotNull] ANTLRGrammarParser.ArNegationContext context)
         {
@@ -115,12 +125,14 @@ namespace NewVersion
             }
             if (rightExprValue is int)
             {
+                types.Put(context, Type.Int);
                 int right = (int)rightExprValue;
                 right *= -1;
                 values.Put(context, right);
             }
             else if(rightExprValue is double)
             {
+                types.Put(context, Type.Float);
                 double right = (double)rightExprValue;
                 right *= -1;
                 values.Put(context, right);
@@ -144,6 +156,7 @@ namespace NewVersion
             }
             if (rightExprValue is bool)
             {
+                types.Put(context, Type.Boolean);
                 bool right = (bool)rightExprValue;
                 values.Put(context, right);
             }
@@ -168,6 +181,7 @@ namespace NewVersion
             {
                 if(leftExprValue is double || rightExprValue is double)
                 {
+                    types.Put(context, Type.Float);
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals("*"))
@@ -181,6 +195,7 @@ namespace NewVersion
                 }
                 else if(leftExprValue is int && rightExprValue is int)
                 {
+                    types.Put(context, Type.Int);
                     int left = (int)leftExprValue;
                     int right = (int)rightExprValue;
                     if (context.op.Text.Equals("*"))
@@ -193,8 +208,9 @@ namespace NewVersion
                     }
                 }
             }
-            else if (leftExprValue is double || rightExprValue is double)
+            else if (leftExprValue is double && rightExprValue is double)
             {
+                types.Put(context, Type.Float);
                 double left = Convert.ToDouble(leftExprValue);
                 double right = Convert.ToDouble(rightExprValue);
                 if (context.op.Text.Equals("*"))
@@ -225,6 +241,7 @@ namespace NewVersion
             }
             if (leftExprValue is int && rightExprValue is int)
             {
+                types.Put(context, Type.Int);
                 int left = (int)leftExprValue;
                 int right = (int)rightExprValue;
                 values.Put(context, left % right);
@@ -251,6 +268,7 @@ namespace NewVersion
             {
                 if (leftExprValue is double || rightExprValue is double)
                 {
+                    types.Put(context, Type.Float);
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals("+"))
@@ -264,6 +282,7 @@ namespace NewVersion
                 }
                 else if (leftExprValue is int && rightExprValue is int)
                 {
+                    types.Put(context, Type.Int);
                     int left = (int)leftExprValue;
                     int right = (int)rightExprValue;
                     if (context.op.Text.Equals("+"))
@@ -276,8 +295,9 @@ namespace NewVersion
                     }
                 }
             }
-            else if(leftExprValue is double || rightExprValue is double)
+            else if(leftExprValue is double && rightExprValue is double)
             {
+                types.Put(context, Type.Float);
                 double left = Convert.ToDouble(leftExprValue);
                 double right = Convert.ToDouble(rightExprValue);
                 if (context.op.Text.Equals("+"))
@@ -308,6 +328,7 @@ namespace NewVersion
             }
             if (leftExprValue is string && rightExprValue is string)
             {
+                types.Put(context, Type.String);
                 string left = (string)leftExprValue;
                 string right = (string)rightExprValue;
                 values.Put(context, left + right);
@@ -333,6 +354,7 @@ namespace NewVersion
             {
                 if (leftExprValue is double || rightExprValue is double)
                 {
+                    types.Put(context, Type.Float);
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals(">"))
@@ -346,6 +368,7 @@ namespace NewVersion
                 }
                 else if (leftExprValue is int && rightExprValue is int)
                 {
+                    types.Put(context, Type.Int);
                     int left = (int)leftExprValue;
                     int right = (int)rightExprValue;
                     if (context.op.Text.Equals(">"))
@@ -356,6 +379,20 @@ namespace NewVersion
                     {
                         values.Put(context, left < right);
                     }
+                }
+            }
+            else if(leftExprValue is double && rightExprValue is double)
+            {
+                types.Put(context, Type.Float);
+                double left = Convert.ToDouble(leftExprValue);
+                double right = Convert.ToDouble(rightExprValue);
+                if (context.op.Text.Equals(">"))
+                {
+                    values.Put(context, left > right);
+                }
+                else
+                {
+                    values.Put(context, left < right);
                 }
             }
             else
@@ -383,6 +420,7 @@ namespace NewVersion
             {
                 if(leftExprValue is string && rightExprValue is string)
                 {
+                    types.Put(context, Type.Boolean);
                     string left = (string)leftExprValue;
                     string right = (string)rightExprValue;
                     if (context.op.Text.Equals("=="))
@@ -396,6 +434,7 @@ namespace NewVersion
                 }
                 else if(leftExprValue is not string && rightExprValue is not string)
                 {
+                    types.Put(context, Type.Boolean);
                     double left = Convert.ToDouble(leftExprValue);
                     double right = Convert.ToDouble(rightExprValue);
                     if (context.op.Text.Equals("=="))
@@ -427,6 +466,7 @@ namespace NewVersion
             }
             if (leftExprValue is bool && rightExprValue is bool)
             {
+                types.Put(context, Type.Boolean);
                 bool left = (bool)leftExprValue;
                 bool right = (bool)rightExprValue;
                 values.Put(context, left && right);
@@ -450,6 +490,7 @@ namespace NewVersion
             }
             if (leftExprValue is bool && rightExprValue is bool)
             {
+                types.Put(context, Type.Boolean);
                 bool left = (bool)leftExprValue;
                 bool right = (bool)rightExprValue;
                 values.Put(context, left || right);

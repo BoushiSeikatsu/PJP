@@ -32,15 +32,20 @@ namespace NewVersion
             {
                 Console.WriteLine(error);
             }
-            InstructionListener instructionListener = new InstructionListener();
+            InstructionListener instructionListener = new InstructionListener(typeChecker.types);
             if(typeChecker.errors.Count == 0)
             {
                 ParseTreeWalker walker2 = new ParseTreeWalker();
                 walker2.Walk(instructionListener, tree);
             }
-            foreach(string s in instructionListener.instructions)
+            using (StreamWriter sw = new StreamWriter(@"..\..\..\..\..\output.txt"))
             {
-                Console.WriteLine(s);
+                foreach (string s in instructionListener.instructions)
+                {
+                    Console.WriteLine(s);
+                    sw.WriteLine(s);
+
+                }
             }
         }
     }
