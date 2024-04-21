@@ -135,7 +135,7 @@ namespace NewVersion
             var expr = values.Get(context.expr());
             if (identifiers.Keys.Contains(expr))
             {
-                instructions.Add("load " + expr);
+                //instructions.Add("load " + expr);
                 expr = identifiers[expr as string];
             }
             if (expr is not bool)
@@ -550,7 +550,7 @@ namespace NewVersion
             instructions.Add("uminus");
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (rightExprValue is int)
@@ -581,7 +581,7 @@ namespace NewVersion
             instructions.Add("not");
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (rightExprValue is bool)
@@ -600,12 +600,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is int || rightExprValue is int)
@@ -667,12 +667,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is int && rightExprValue is int)
@@ -694,12 +694,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is int || rightExprValue is int)
@@ -761,12 +761,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is string && rightExprValue is string)
@@ -787,12 +787,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is int || rightExprValue is int)
@@ -839,12 +839,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is bool || rightExprValue is bool)
@@ -897,12 +897,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is bool && rightExprValue is bool)
@@ -923,12 +923,12 @@ namespace NewVersion
             var rightExprValue = values.Get(context.expr()[1]);
             if (identifiers.Keys.Contains(leftExprValue))
             {
-                instructions.Add("load " + leftExprValue);
+                //instructions.Add("load " + leftExprValue);
                 leftExprValue = identifiers[leftExprValue as string];
             }
             if (identifiers.Keys.Contains(rightExprValue))
             {
-                instructions.Add("load " + rightExprValue);
+                //instructions.Add("load " + rightExprValue);
                 rightExprValue = identifiers[rightExprValue as string];
             }
             if (leftExprValue is bool && rightExprValue is bool)
