@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj": {}
+    "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj": {
+    "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj",
+        "projectUniqueName": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj",
         "projectName": "NewVersion",
-        "projectPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\NewVersion.csproj",
-        "packagesPath": "C:\\Users\\msi pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msi pc\\Documents\\PythonProjects\\PJP\\PJProjekt\\NewVersion\\obj\\",
+        "projectPath": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\NewVersion.csproj",
+        "packagesPath": "C:\\Users\\Michal\\.nuget\\packages\\",
+        "outputPath": "E:\\Python Scripts\\PJP_Project\\PJProjekt\\NewVersion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msi pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Michal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
